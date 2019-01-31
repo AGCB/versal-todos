@@ -22,11 +22,11 @@ class App extends Component {
   }
 
   mapStateToProps = state => {
-    if(this.state.currentFilter) {
-      return state.filter(x => !x.completed)
+    if(this.state.currentFilter === false) {
+      return state.filter(x => x.completed)
     }
     else {
-      return state.filter(x => x.completed)
+      return state;
     }
   }
 
